@@ -4,15 +4,18 @@ using System.Text;
 using System.Net;
 using System.Net.Sockets;
 using System.Windows.Forms;
-using System.ComponentModel;
 using System.Linq;
+using System.Net.Http;
+
+using System.Text.Json;
+using System.Threading.Tasks;
 
 //https://github.com/AbleOpus/NetworkingSamples/blob/master/MultiServer/Program.cs
 namespace Windows_Forms_Chat
 {
     public class TCPChatServer : TCPChatBase
     {
-        
+
         public Socket serverSocket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
         //connected clients
         public List<ClientSocket> clientSockets = new List<ClientSocket>();
@@ -30,7 +33,7 @@ namespace Windows_Forms_Chat
                     tcp.chatTextBox = chatTextBox;
                 }
             }
-            catch (Exception) 
+            catch (Exception)
             {
                 errorLabel.Text = "Port was invalid";
             }
@@ -90,7 +93,7 @@ namespace Windows_Forms_Chat
         public void ReceiveCallback(IAsyncResult AR)
         {
             ClientSocket currentClientSocket = (ClientSocket)AR.AsyncState;
-            
+
             int received;
 
             try
@@ -105,19 +108,24 @@ namespace Windows_Forms_Chat
                 clientSockets.Remove(currentClientSocket);
                 return;
             }
+            catch (Exception ex) 
+            {
+                AddToChat("Client no longer connected");
+                return;
+            }
 
             byte[] recBuf = new byte[received];
             Array.Copy(currentClientSocket.buffer, recBuf, received);
             string text = Encoding.ASCII.GetString(recBuf);
 
-            AddToChat( text );
+            AddToChat(text);
 
             string[] incomingText = text.Split(" ");
 
-            switch (incomingText[0].ToLower()) 
+            switch (incomingText[0].ToLower())
             {
                 case "!commands":
-                    byte[] data = Encoding.ASCII.GetBytes("Commands are !commands !user !who !about !whisper !exit !custom");
+                    byte[] data = Encoding.ASCII.GetBytes("Commands are !commands !user !who !about !whisper !exit !away !back");
                     currentClientSocket.socket.Send(data);
                     AddToChat("Commands sent to client");
                     break;
@@ -135,27 +143,28 @@ namespace Windows_Forms_Chat
                         currentClientSocket.socket.Close();
                         clientSockets.Remove(currentClientSocket);
                         AddToChat("Client disconnected");
+                        return;
                     }
                     break;
                 case "!user":
                     AddToChat("Change username request");
                     if (ValidateUsername(incomingText[1]))
-                    {                        
+                    {
                         SendToAll($"{currentClientSocket.username} has changed their username to {incomingText[1]}", currentClientSocket);
                         currentClientSocket.username = incomingText[1];
                     }
-                    else 
+                    else
                     {
                         AddToChat("Username already in use, please choose another name");
                     }
                     break;
                 case "!who":
                     SendBack("The current users connected to this server are:", currentClientSocket);
-                    foreach (ClientSocket c in clientSockets) 
-                    {                      
+                    foreach (ClientSocket c in clientSockets)
+                    {
                         SendBack($" - {c.username}\r\n", currentClientSocket);
                     }
-                        break;
+                    break;
                 case "!about":
                     SendBack("Welcome to this ChatterBox service. This is a prototype chat program designed to test and learn .NET socket programming and add " +
                              "to the creator's portfolio. The creator of this program is James Murphy, a web developer and software engineering student at " +
@@ -163,11 +172,11 @@ namespace Windows_Forms_Chat
                     break;
                 case "!whisper":
                     ClientSocket clientTo = null;
-                    if (currentClientSocket.username == incomingText[1]) 
+                    if (currentClientSocket.username == incomingText[1])
                     {
                         SendBack("Sorry, you cannot send private messages to yourself", currentClientSocket);
                     }
-                    else 
+                    else
                     {
                         foreach (ClientSocket c in clientSockets)
                         {
@@ -176,6 +185,10 @@ namespace Windows_Forms_Chat
                                 clientTo = c;
                                 SendToOne(string.Join(" ", incomingText.Skip(2)), currentClientSocket, clientTo);
                                 SendBack(string.Join(" ", incomingText.Skip(2)), currentClientSocket, false);
+                                if (c.away) 
+                                {
+                                    SendBackAway($"{c.awayMessage}", currentClientSocket, c);
+                                }
                                 currentClientSocket.socket.BeginReceive(currentClientSocket.buffer, 0, ClientSocket.BUFFER_SIZE, SocketFlags.None, ReceiveCallback, currentClientSocket);
                                 return;
                             }
@@ -194,7 +207,44 @@ namespace Windows_Forms_Chat
                     clientSockets.Remove(currentClientSocket);
                     AddToChat("Client disconnected");
                     break;
-                case "!custom":
+                case "!away":
+                    SendBack("Your away message has been set to: ", currentClientSocket);
+                    SendBack($"{string.Join(" ", incomingText.Skip(1))}", currentClientSocket);
+                    currentClientSocket.away = true;
+                    currentClientSocket.awayMessage = string.Join(" ", incomingText.Skip(1));
+                    break;
+                case "!back":
+                    SendBack("Your away message has been cleared, welcome back!", currentClientSocket);
+                    currentClientSocket.away = false;
+                    currentClientSocket.awayMessage = "";
+                    break;
+                case "!kick":
+                    if (currentClientSocket.mod) 
+                    {
+                        foreach (ClientSocket c in clientSockets)
+                        {
+                            if (incomingText[1] == c.username)
+                            {
+                                AddToChat($"{c.username} has been removed from the channel");
+                                SendToAll($"{c.username} has been removed from the channel", currentClientSocket);
+                                try 
+                                {
+                                    c.socket.Shutdown(SocketShutdown.Both);
+                                    c.socket.Close();
+                                }
+                                catch (SocketException ex)
+                                {
+                                    AddToChat($"Error closing socket: {ex.Message}");
+                                }
+                                clientSockets.Remove(c);
+                                break;
+                            }
+                        }
+                    }
+                    else 
+                    {
+                        SendBack("Only moderators can kick another user", currentClientSocket);
+                    }
                     break;
                 default:
                     //normal message broadcast out to all clients
@@ -209,18 +259,18 @@ namespace Windows_Forms_Chat
         {
             foreach (ClientSocket c in clientSockets)
             {
-                if(from == null || !from.socket.Equals(c))
+                if (from == null || !from.socket.Equals(c))
                 {
-                    if (systemMsg) 
+                    if (systemMsg)
                     {
                         byte[] data = Encoding.ASCII.GetBytes(str);
                         c.socket.Send(data);
                     }
-                    else 
+                    else
                     {
                         byte[] data = Encoding.ASCII.GetBytes($"[{c.username}]: {str}");
                         c.socket.Send(data);
-                    }   
+                    }
                 }
             }
         }
@@ -234,7 +284,7 @@ namespace Windows_Forms_Chat
             }
         }
 
-        public void SendBack(string str, ClientSocket client, bool systemMsg = true) 
+        public void SendBack(string str, ClientSocket client, bool systemMsg = true, ClientSocket clientFrom = null)
         {
             if (systemMsg)
             {
@@ -248,16 +298,30 @@ namespace Windows_Forms_Chat
             }
         }
 
-        public bool ValidateUsername(string newUsername) 
+        public void SendBackAway(string str, ClientSocket client, ClientSocket clientFrom) 
         {
-            for (int i = 0; i < clientSockets.Count; i++) 
+            byte[] data = Encoding.ASCII.GetBytes($"[{clientFrom.username} - Away]: {str}");
+            client.socket.Send(data);
+        }
+
+
+        public bool ValidateUsername(string newUsername)
+        {
+            for (int i = 0; i < clientSockets.Count; i++)
             {
-                if(clientSockets[i].username == newUsername) 
+                if (clientSockets[i].username == newUsername)
                 {
                     return false;
                 }
             }
             return true;
         }
+    }
+
+    public class Post
+    {
+        public int Id { get; set; }
+        public string Title { get; set; }
+        public string Body { get; set; }
     }
 }

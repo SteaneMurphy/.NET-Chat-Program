@@ -44,3 +44,4 @@ C:\Users\james\Desktop\NDS203\Assessment_2\ChatProgram\Windows Forms core chat\o
 C:\Users\james\Desktop\NDS203\Assessment_2\ChatProgram\Windows Forms core chat\obj\Debug\netcoreapp3.1\Windows_Forms_CORE_CHAT_UGH.Properties.Resources.resources
 C:\Users\james\Desktop\NDS203\Assessment_2\ChatProgram\Windows Forms core chat\obj\Debug\netcoreapp3.1\Windows_Forms_Chat.ChatForm.resources
 C:\Users\james\Desktop\NDS203\Assessment_2\ChatProgram\Windows Forms core chat\obj\Debug\netcoreapp3.1\Windows_Forms_CORE_CHAT_UGH.ConnectionForm.resources
+C:\Users\james\Desktop\NDS203\Assessment_2\ChatProgram\Windows Forms core chat\obj\Debug\netcoreapp3.1\Windows Forms core chat.sourcelink.json

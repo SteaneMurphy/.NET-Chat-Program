@@ -12,8 +12,6 @@ namespace Windows_Forms_Chat
         //public static TCPChatClient tcpChatClient;
         public Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
         public ClientSocket clientSocket = new ClientSocket();
-
-
         public int serverPort;
         public string serverIP;
 
@@ -83,7 +81,7 @@ namespace Windows_Forms_Chat
                 {
                     // Server has gracefully closed the connection (Zero means no data is received, connection closed)
                     AddToChat("Server has disconnected.");
-                    currentClientSocket.socket.Close();
+                    currentClientSocket.socket.Close(); 
                     return;
                 }
             }

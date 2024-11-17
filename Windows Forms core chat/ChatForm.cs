@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Drawing;
+using System.Runtime.CompilerServices;
 using System.Windows.Forms;
 
 
@@ -24,13 +25,36 @@ namespace Windows_Forms_Chat
 
         private void SendButton_Click(object sender, EventArgs e)
         {
-            if (client != null)
+            if (client != null && client.socket.Connected)
             {
                 client.SendString(typeTextBox.Text);
             }
             else if (server != null) 
             {
+                string[] incomingText = typeTextBox.Text.Split(" ");
+                if (incomingText[0] == "!mod") 
+                {
+                    foreach (ClientSocket c in server.clientSockets) 
+                    {
+                        if (incomingText[1] == c.username) 
+                        {
+                            if (c.mod) 
+                            {
+                                c.mod = false;
+                            }
+                            else 
+                            {
+                                c.mod = true;
+                            }
+                        }
+                    }
+                }
+
                 server.SendToAll(typeTextBox.Text, null);
+            }
+            else 
+            {
+                chatTextBox.Text = "Message not sent - You are not connected to a server";
             }
         }
 
