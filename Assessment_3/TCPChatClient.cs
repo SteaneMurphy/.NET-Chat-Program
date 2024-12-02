@@ -131,7 +131,7 @@ namespace Windows_Forms_Chat
                     if (incomingText[1] == "valid")
                     {
                         forms.loginForm.Hide();
-                        forms.chatForm.Invoke(new Action(() => forms.chatForm.Show()));
+                        forms.chatForm.Show();
                     }
                     else 
                     {

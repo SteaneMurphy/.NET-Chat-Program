@@ -153,7 +153,6 @@ namespace Windows_Forms_Chat
             AddToChat($"[{currentClientSocket.username}]: {text}");
 
             string[] incomingText = text.Split(" ");
-
             switch (incomingText[0].ToLower())
             {
                 /*

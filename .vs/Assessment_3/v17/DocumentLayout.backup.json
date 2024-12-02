@@ -3,20 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\james\\Desktop\\Assessment_3\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{B8333D53-CBB6-444E-9CE3-19E9F7B85716}|Assessment_3\\Assessment_3.csproj|c:\\users\\james\\desktop\\assessment_3\\assessment_3\\tcpchatclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8333D53-CBB6-444E-9CE3-19E9F7B85716}|Assessment_3\\Assessment_3.csproj|solutionrelative:assessment_3\\tcpchatclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B8333D53-CBB6-444E-9CE3-19E9F7B85716}|Assessment_3\\Assessment_3.csproj|c:\\users\\james\\desktop\\assessment_3\\assessment_3\\connectionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8333D53-CBB6-444E-9CE3-19E9F7B85716}|Assessment_3\\Assessment_3.csproj|solutionrelative:assessment_3\\connectionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{B8333D53-CBB6-444E-9CE3-19E9F7B85716}|Assessment_3\\Assessment_3.csproj|c:\\users\\james\\desktop\\assessment_3\\assessment_3\\validation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8333D53-CBB6-444E-9CE3-19E9F7B85716}|Assessment_3\\Assessment_3.csproj|solutionrelative:assessment_3\\validation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B8333D53-CBB6-444E-9CE3-19E9F7B85716}|Assessment_3\\Assessment_3.csproj|c:\\users\\james\\desktop\\assessment_3\\assessment_3\\tcpchatserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B8333D53-CBB6-444E-9CE3-19E9F7B85716}|Assessment_3\\Assessment_3.csproj|solutionrelative:assessment_3\\tcpchatserver.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{B8333D53-CBB6-444E-9CE3-19E9F7B85716}|Assessment_3\\Assessment_3.csproj|c:\\users\\james\\desktop\\assessment_3\\assessment_3\\databasemanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8333D53-CBB6-444E-9CE3-19E9F7B85716}|Assessment_3\\Assessment_3.csproj|solutionrelative:assessment_3\\databasemanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8333D53-CBB6-444E-9CE3-19E9F7B85716}|Assessment_3\\Assessment_3.csproj|c:\\users\\james\\desktop\\assessment_3\\assessment_3\\registrationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8333D53-CBB6-444E-9CE3-19E9F7B85716}|Assessment_3\\Assessment_3.csproj|solutionrelative:assessment_3\\registrationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{B8333D53-CBB6-444E-9CE3-19E9F7B85716}|Assessment_3\\Assessment_3.csproj|c:\\users\\james\\desktop\\assessment_3\\assessment_3\\forms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B8333D53-CBB6-444E-9CE3-19E9F7B85716}|Assessment_3\\Assessment_3.csproj|solutionrelative:assessment_3\\forms.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8333D53-CBB6-444E-9CE3-19E9F7B85716}|Assessment_3\\Assessment_3.csproj|c:\\users\\james\\desktop\\assessment_3\\assessment_3\\connectionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8333D53-CBB6-444E-9CE3-19E9F7B85716}|Assessment_3\\Assessment_3.csproj|solutionrelative:assessment_3\\connectionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8333D53-CBB6-444E-9CE3-19E9F7B85716}|Assessment_3\\Assessment_3.csproj|c:\\users\\james\\desktop\\assessment_3\\assessment_3\\preloginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8333D53-CBB6-444E-9CE3-19E9F7B85716}|Assessment_3\\Assessment_3.csproj|solutionrelative:assessment_3\\preloginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8333D53-CBB6-444E-9CE3-19E9F7B85716}|Assessment_3\\Assessment_3.csproj|c:\\users\\james\\desktop\\assessment_3\\assessment_3\\chatform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8333D53-CBB6-444E-9CE3-19E9F7B85716}|Assessment_3\\Assessment_3.csproj|solutionrelative:assessment_3\\chatform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B8333D53-CBB6-444E-9CE3-19E9F7B85716}|Assessment_3\\Assessment_3.csproj|c:\\users\\james\\desktop\\assessment_3\\assessment_3\\tcpchatclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B8333D53-CBB6-444E-9CE3-19E9F7B85716}|Assessment_3\\Assessment_3.csproj|solutionrelative:assessment_3\\tcpchatclient.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{B8333D53-CBB6-444E-9CE3-19E9F7B85716}|Assessment_3\\Assessment_3.csproj|c:\\users\\james\\desktop\\assessment_3\\assessment_3\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -31,23 +51,7 @@
       "RelativeMoniker": "D:0:0:{B8333D53-CBB6-444E-9CE3-19E9F7B85716}|Assessment_3\\Assessment_3.csproj|solutionrelative:assessment_3\\clientsocket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B8333D53-CBB6-444E-9CE3-19E9F7B85716}|Assessment_3\\Assessment_3.csproj|c:\\users\\james\\desktop\\assessment_3\\assessment_3\\chatform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8333D53-CBB6-444E-9CE3-19E9F7B85716}|Assessment_3\\Assessment_3.csproj|solutionrelative:assessment_3\\chatform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B8333D53-CBB6-444E-9CE3-19E9F7B85716}|Assessment_3\\Assessment_3.csproj|c:\\users\\james\\desktop\\assessment_3\\assessment_3\\validation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8333D53-CBB6-444E-9CE3-19E9F7B85716}|Assessment_3\\Assessment_3.csproj|solutionrelative:assessment_3\\validation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B8333D53-CBB6-444E-9CE3-19E9F7B85716}|Assessment_3\\Assessment_3.csproj|c:\\users\\james\\desktop\\assessment_3\\assessment_3\\databasemanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8333D53-CBB6-444E-9CE3-19E9F7B85716}|Assessment_3\\Assessment_3.csproj|solutionrelative:assessment_3\\databasemanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B8333D53-CBB6-444E-9CE3-19E9F7B85716}|Assessment_3\\Assessment_3.csproj|c:\\users\\james\\desktop\\assessment_3\\assessment_3\\registrationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8333D53-CBB6-444E-9CE3-19E9F7B85716}|Assessment_3\\Assessment_3.csproj|solutionrelative:assessment_3\\registrationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{B8333D53-CBB6-444E-9CE3-19E9F7B85716}|Assessment_3\\Assessment_3.csproj|c:\\users\\james\\desktop\\assessment_3\\assessment_3\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{B8333D53-CBB6-444E-9CE3-19E9F7B85716}|Assessment_3\\Assessment_3.csproj|C:\\Users\\james\\Desktop\\Assessment_3\\assessment_3\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{B8333D53-CBB6-444E-9CE3-19E9F7B85716}|Assessment_3\\Assessment_3.csproj|solutionrelative:assessment_3\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -55,7 +59,7 @@
       "RelativeMoniker": "D:0:0:{B8333D53-CBB6-444E-9CE3-19E9F7B85716}|Assessment_3\\Assessment_3.csproj|solutionrelative:assessment_3\\loginform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B8333D53-CBB6-444E-9CE3-19E9F7B85716}|Assessment_3\\Assessment_3.csproj|c:\\users\\james\\desktop\\assessment_3\\assessment_3\\registrationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{B8333D53-CBB6-444E-9CE3-19E9F7B85716}|Assessment_3\\Assessment_3.csproj|C:\\Users\\james\\Desktop\\Assessment_3\\assessment_3\\registrationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{B8333D53-CBB6-444E-9CE3-19E9F7B85716}|Assessment_3\\Assessment_3.csproj|solutionrelative:assessment_3\\registrationform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -63,15 +67,11 @@
       "RelativeMoniker": "D:0:0:{B8333D53-CBB6-444E-9CE3-19E9F7B85716}|Assessment_3\\Assessment_3.csproj|solutionrelative:assessment_3\\registrationform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B8333D53-CBB6-444E-9CE3-19E9F7B85716}|Assessment_3\\Assessment_3.csproj|c:\\users\\james\\desktop\\assessment_3\\assessment_3\\preloginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{B8333D53-CBB6-444E-9CE3-19E9F7B85716}|Assessment_3\\Assessment_3.csproj|solutionrelative:assessment_3\\preloginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{B8333D53-CBB6-444E-9CE3-19E9F7B85716}|Assessment_3\\Assessment_3.csproj|c:\\users\\james\\desktop\\assessment_3\\assessment_3\\preloginform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{B8333D53-CBB6-444E-9CE3-19E9F7B85716}|Assessment_3\\Assessment_3.csproj|solutionrelative:assessment_3\\preloginform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{B8333D53-CBB6-444E-9CE3-19E9F7B85716}|Assessment_3\\Assessment_3.csproj|c:\\users\\james\\desktop\\assessment_3\\assessment_3\\connectionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{B8333D53-CBB6-444E-9CE3-19E9F7B85716}|Assessment_3\\Assessment_3.csproj|C:\\Users\\james\\Desktop\\Assessment_3\\assessment_3\\connectionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{B8333D53-CBB6-444E-9CE3-19E9F7B85716}|Assessment_3\\Assessment_3.csproj|solutionrelative:assessment_3\\connectionform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
@@ -86,7 +86,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 11,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Document",
@@ -98,12 +98,11 @@
               "RelativeToolTip": "Assessment_3\\Login.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T07:56:47.949Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-01T07:56:47.949Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "RegistrationForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\james\\Desktop\\Assessment_3\\Assessment_3\\RegistrationForm.cs",
               "RelativeDocumentMoniker": "Assessment_3\\RegistrationForm.cs",
@@ -115,7 +114,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 9,
               "Title": "LoginForm.cs",
               "DocumentMoniker": "C:\\Users\\james\\Desktop\\Assessment_3\\Assessment_3\\LoginForm.cs",
               "RelativeDocumentMoniker": "Assessment_3\\LoginForm.cs",
@@ -128,28 +127,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 6,
               "Title": "PreLoginForm.cs",
               "DocumentMoniker": "C:\\Users\\james\\Desktop\\Assessment_3\\Assessment_3\\PreLoginForm.cs",
               "RelativeDocumentMoniker": "Assessment_3\\PreLoginForm.cs",
               "ToolTip": "C:\\Users\\james\\Desktop\\Assessment_3\\Assessment_3\\PreLoginForm.cs",
               "RelativeToolTip": "Assessment_3\\PreLoginForm.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACQAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAEwB4AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-01T00:06:51.507Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "LoginForm.cs [Design]",
               "DocumentMoniker": "C:\\Users\\james\\Desktop\\Assessment_3\\Assessment_3\\LoginForm.cs",
               "RelativeDocumentMoniker": "Assessment_3\\LoginForm.cs",
               "ToolTip": "C:\\Users\\james\\Desktop\\Assessment_3\\Assessment_3\\LoginForm.cs [Design]",
               "RelativeToolTip": "Assessment_3\\LoginForm.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T07:56:48.273Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2024-12-01T07:56:48.273Z"
             },
             {
               "$type": "Document",
@@ -161,12 +159,11 @@
               "RelativeToolTip": "Assessment_3\\PreLoginForm.Designer.cs",
               "ViewState": "AgIAAFoAAAAAAAAAAADwv2wAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T02:57:48.577Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-01T02:57:48.577Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "LoginForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\james\\Desktop\\Assessment_3\\Assessment_3\\LoginForm.Designer.cs",
               "RelativeDocumentMoniker": "Assessment_3\\LoginForm.Designer.cs",
@@ -174,12 +171,11 @@
               "RelativeToolTip": "Assessment_3\\LoginForm.Designer.cs",
               "ViewState": "AgIAAIAAAAAAAAAAAADwv4oAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T01:55:36.302Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-01T01:55:36.302Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "RegistrationForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\james\\Desktop\\Assessment_3\\Assessment_3\\RegistrationForm.Designer.cs",
               "RelativeDocumentMoniker": "Assessment_3\\RegistrationForm.Designer.cs",
@@ -192,52 +188,52 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 3,
               "Title": "RegistrationForm.cs",
               "DocumentMoniker": "C:\\Users\\james\\Desktop\\Assessment_3\\Assessment_3\\RegistrationForm.cs",
               "RelativeDocumentMoniker": "Assessment_3\\RegistrationForm.cs",
               "ToolTip": "C:\\Users\\james\\Desktop\\Assessment_3\\Assessment_3\\RegistrationForm.cs",
               "RelativeToolTip": "Assessment_3\\RegistrationForm.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAYwCEAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAABMAAAAAAAAAAAAYwCMAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-01T00:22:05.287Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "Forms.cs",
               "DocumentMoniker": "C:\\Users\\james\\Desktop\\Assessment_3\\Assessment_3\\Forms.cs",
               "RelativeDocumentMoniker": "Assessment_3\\Forms.cs",
               "ToolTip": "C:\\Users\\james\\Desktop\\Assessment_3\\Assessment_3\\Forms.cs",
               "RelativeToolTip": "Assessment_3\\Forms.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAXAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-01T06:12:47.007Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 0,
               "Title": "Validation.cs",
               "DocumentMoniker": "C:\\Users\\james\\Desktop\\Assessment_3\\Assessment_3\\Validation.cs",
               "RelativeDocumentMoniker": "Assessment_3\\Validation.cs",
               "ToolTip": "C:\\Users\\james\\Desktop\\Assessment_3\\Assessment_3\\Validation.cs",
               "RelativeToolTip": "Assessment_3\\Validation.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAGUAAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAxwBQAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-01T01:59:13.986Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 8,
               "Title": "TCPChatClient.cs",
               "DocumentMoniker": "C:\\Users\\james\\Desktop\\Assessment_3\\Assessment_3\\TCPChatClient.cs",
               "RelativeDocumentMoniker": "Assessment_3\\TCPChatClient.cs",
               "ToolTip": "C:\\Users\\james\\Desktop\\Assessment_3\\Assessment_3\\TCPChatClient.cs",
               "RelativeToolTip": "Assessment_3\\TCPChatClient.cs",
-              "ViewState": "AgIAAHMAAAAAAAAAAAAcwIUAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAABEAAAAAAAAAAAAAAIUAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-01T00:35:25.811Z",
               "EditorCaption": ""
@@ -256,39 +252,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 5,
               "Title": "ConnectionForm.cs",
               "DocumentMoniker": "C:\\Users\\james\\Desktop\\Assessment_3\\Assessment_3\\ConnectionForm.cs",
               "RelativeDocumentMoniker": "Assessment_3\\ConnectionForm.cs",
               "ToolTip": "C:\\Users\\james\\Desktop\\Assessment_3\\Assessment_3\\ConnectionForm.cs",
               "RelativeToolTip": "Assessment_3\\ConnectionForm.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABoAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAG0AAAAAAAAAAAAowBMAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-01T00:05:58.332Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 2,
               "Title": "DatabaseManagement.cs",
               "DocumentMoniker": "C:\\Users\\james\\Desktop\\Assessment_3\\Assessment_3\\DatabaseManagement.cs",
               "RelativeDocumentMoniker": "Assessment_3\\DatabaseManagement.cs",
               "ToolTip": "C:\\Users\\james\\Desktop\\Assessment_3\\Assessment_3\\DatabaseManagement.cs",
               "RelativeToolTip": "Assessment_3\\DatabaseManagement.cs",
-              "ViewState": "AgIAAHMAAAAAAAAAAAAUwHsAAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAHAAAAAAAAAAAAAUwJAAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-01T01:11:30.611Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "TCPChatServer.cs",
               "DocumentMoniker": "C:\\Users\\james\\Desktop\\Assessment_3\\Assessment_3\\TCPChatServer.cs",
               "RelativeDocumentMoniker": "Assessment_3\\TCPChatServer.cs",
               "ToolTip": "C:\\Users\\james\\Desktop\\Assessment_3\\Assessment_3\\TCPChatServer.cs",
               "RelativeToolTip": "Assessment_3\\TCPChatServer.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAEwBsAAAAPAAAAAAAAAA==",
+              "ViewState": "AgIAAE0BAAAAAAAAAAAWwJoAAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-01T01:57:11.106Z",
               "EditorCaption": ""
@@ -301,14 +297,14 @@
               "RelativeDocumentMoniker": "Assessment_3\\ChatForm.cs",
               "ToolTip": "C:\\Users\\james\\Desktop\\Assessment_3\\Assessment_3\\ChatForm.cs",
               "RelativeToolTip": "Assessment_3\\ChatForm.cs",
-              "ViewState": "AgIAAIEAAAAAAAAAAAAmwOUAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAH4AAAAAAAAAAAAmwOUAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-01T02:02:04.523Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
               "Title": "ClientSocket.cs",
               "DocumentMoniker": "C:\\Users\\james\\Desktop\\Assessment_3\\Assessment_3\\ClientSocket.cs",
               "RelativeDocumentMoniker": "Assessment_3\\ClientSocket.cs",
@@ -316,12 +312,11 @@
               "RelativeToolTip": "Assessment_3\\ClientSocket.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T01:12:06.461Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-01T01:12:06.461Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "ConnectionForm.Designer.cs",
               "DocumentMoniker": "C:\\Users\\james\\Desktop\\Assessment_3\\Assessment_3\\ConnectionForm.Designer.cs",
               "RelativeDocumentMoniker": "Assessment_3\\ConnectionForm.Designer.cs",

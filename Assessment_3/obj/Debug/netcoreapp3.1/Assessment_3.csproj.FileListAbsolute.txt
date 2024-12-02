@@ -26,3 +26,4 @@ C:\Users\james\Desktop\Assessment_3\Assessment_3\obj\Debug\netcoreapp3.1\Assessm
 C:\Users\james\Desktop\Assessment_3\Assessment_3\obj\Debug\netcoreapp3.1\Windows_Forms_CORE_CHAT_UGH.LoginForm.resources
 C:\Users\james\Desktop\Assessment_3\Assessment_3\obj\Debug\netcoreapp3.1\Windows_Forms_CORE_CHAT_UGH.RegistrationForm.resources
 C:\Users\james\Desktop\Assessment_3\Assessment_3\obj\Debug\netcoreapp3.1\Windows_Forms_CORE_CHAT_UGH.PreLoginForm.resources
+C:\Users\james\Desktop\Assessment_3\Assessment_3\obj\Debug\netcoreapp3.1\Assessment_3.sourcelink.json

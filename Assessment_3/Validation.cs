@@ -17,9 +17,9 @@ namespace Windows_Forms_CORE_CHAT_UGH
 
         public (bool, string) ValidateLogin(string _username, string _password) 
         {
-            (bool username, string usernameError) = UsernameExists(_username);
+            (bool username, string usernameError) = ValidateUsername(_username);
             bool password = PasswordExists(_password);
-
+            Console.WriteLine($"username: {username}, pass: {password}");
             if (username && password)
             {
                 return (true, "");
@@ -55,6 +55,18 @@ namespace Windows_Forms_CORE_CHAT_UGH
             else 
             {
                 return (true, "");
+            }
+        }
+
+        public (bool, string) ValidateUsername(string _username)
+        {
+            if (db.QueryUsername(_username) == _username)
+            {
+                return (true, "");
+            }
+            else
+            {
+                return (false, "Username does not exist");
             }
         }
 

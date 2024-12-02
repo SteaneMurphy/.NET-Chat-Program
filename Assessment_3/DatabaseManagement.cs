@@ -95,9 +95,8 @@ namespace Windows_Forms_CORE_CHAT_UGH
             
         }
 
-        public void AddEntry(string _username, string _password, string _email) 
+        public void AddEntry(string _username, string _email, string _password) 
         {
-            Console.WriteLine("in");
             using (SQLiteConnection db = new SQLiteConnection(database_URI))
             {
                 db.Open();
@@ -110,6 +109,7 @@ namespace Windows_Forms_CORE_CHAT_UGH
                     cmd.Parameters.AddWithValue("@userName", _username);
                     cmd.Parameters.AddWithValue("@email", _email);
                     cmd.Parameters.AddWithValue("@password", _password);
+                    cmd.ExecuteNonQuery();
                 }
 
                 db.Close();
@@ -142,6 +142,7 @@ namespace Windows_Forms_CORE_CHAT_UGH
                 }
                 
                 db.Close();
+                Console.WriteLine(userName);
                 return userName;
             }
         }
