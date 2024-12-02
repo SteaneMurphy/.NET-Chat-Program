@@ -1,4 +1,6 @@
-﻿using Windows_Forms_Chat;
+﻿using System.Windows.Forms;
+using System;
+using Windows_Forms_Chat;
 
 namespace Windows_Forms_CORE_CHAT_UGH
 {
@@ -10,13 +12,25 @@ namespace Windows_Forms_CORE_CHAT_UGH
         public ConnectionForm connectionForm;
         public ChatForm chatForm;
 
-        public Forms(TCPChatClient client, ConnectionForm _connectionForm, ChatForm _chatForm) 
+        public Forms(TCPChatClient client, ConnectionForm _connectionForm, ChatForm _chatForm)
         {
             preLoginForm = new PreLoginForm(client);
             loginForm = new LoginForm(client);
             registrationForm = new RegistrationForm(client);
             connectionForm = _connectionForm;
             chatForm = _chatForm;
+        }
+
+        public void SafeInvoke(Control control, Action action)
+        {
+            if (control.InvokeRequired)
+            {
+                control.BeginInvoke(new Action(() => action()));
+            }
+            else
+            {
+                action();
+            }
         }
     }
 }

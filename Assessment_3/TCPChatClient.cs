@@ -2,6 +2,7 @@
 using System.Linq;
 using System.Net.Sockets;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 using Windows_Forms_CORE_CHAT_UGH;
 
@@ -130,16 +131,31 @@ namespace Windows_Forms_Chat
                 case "!login":
                     if (incomingText[1] == "valid")
                     {
-                        forms.loginForm.Hide();
-                        forms.chatForm.Show();
+                        forms.loginForm.BeginInvoke(new Action(() =>
+                        {
+                            forms.loginForm.Hide();
+                            forms.chatForm.Show();
+                        }));
                     }
                     else 
                     {
-                        forms.loginForm.SetErrorLabel(string.Join(", ", incomingText.Skip(1)));
+                        forms.loginForm.BeginInvoke(new Action(() =>
+                        {
+                            forms.loginForm.SetErrorLabel(string.Join(", ", incomingText.Skip(1)));
+                        }));
+                        
                     }
                     break;
                 default:
                     AddToChat(text);
+                    break;
+                case "!regvalid":
+                    Console.WriteLine("here");
+                    forms.registrationForm.BeginInvoke(new Action(() =>
+                    {
+                        forms.registrationForm.Hide();
+                        forms.chatForm.Show();
+                    }));
                     break;
                 case "!regError":
                     if (incomingText[1] != "") 

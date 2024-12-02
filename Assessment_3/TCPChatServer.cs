@@ -347,6 +347,10 @@ namespace Windows_Forms_Chat
                     if (valid)
                     {
                         SendBack("!login valid", currentClientSocket);
+                        currentClientSocket.username = incomingText[1];
+                        SendToAll($"{currentClientSocket.username} has entered the chat!", currentClientSocket);
+                        currentClientSocket.stateLogin = false;
+                        currentClientSocket.stateChatting = true;
                     }
                     else 
                     {
@@ -362,7 +366,11 @@ namespace Windows_Forms_Chat
                     if (registrationValid) 
                     {
                         db.AddEntry(incomingText[1], incomingText[2], incomingText[3]);
-                        SendBack("!login valid", currentClientSocket);
+                        SendBack("!regvalid", currentClientSocket);
+                        currentClientSocket.username = incomingText[1];
+                        SendToAll($"{currentClientSocket.username} has entered the chat!", currentClientSocket);
+                        currentClientSocket.stateLogin = false;
+                        currentClientSocket.stateChatting = true;
                     }
                     else 
                     {

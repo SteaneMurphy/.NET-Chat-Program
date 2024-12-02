@@ -18,7 +18,7 @@ namespace Windows_Forms_CORE_CHAT_UGH
         TCPChatServer server = null;
         TCPChatClient client = null;
         ChatForm chatForm;
-        Forms forms;
+        public Forms forms;
 
         public ConnectionForm()
         {
