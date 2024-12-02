@@ -1,7 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Data.SQLite;
 using System.IO;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement.StartPanel;
+using System.Linq;
 
 namespace Windows_Forms_CORE_CHAT_UGH
 {
@@ -87,6 +88,43 @@ namespace Windows_Forms_CORE_CHAT_UGH
                 }
 
                 db.Close();
+            }
+        }
+
+        public Dictionary<string, int[]> ScoresHighestToLowest()
+        {
+            Dictionary<string, int[]> unsortedScores = new Dictionary<string, int[]>();
+
+            using (SQLiteConnection db = new SQLiteConnection(database_URI))
+            {
+                db.Open();
+                string query = "SELECT userName, wins, losses, draws FROM Users";
+
+                using (SQLiteCommand cmd = new SQLiteCommand(query, db))
+                {
+                    using (SQLiteDataReader reader = cmd.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            // Extract the user data from the reader
+                            string username = reader["userName"].ToString();
+                            int wins = Convert.ToInt32(reader["wins"]);
+                            int losses = Convert.ToInt32(reader["losses"]);
+                            int draws = Convert.ToInt32(reader["draws"]);
+
+                            // Store the values in the dictionary with the username as the key
+                            unsortedScores[username] = new int[] { wins, losses, draws };
+                        }
+                    }
+                }
+                db.Close();
+
+                var scores = new Dictionary<string, int[]>(
+                    unsortedScores.OrderByDescending(entry => entry.Value[0])
+                    .ToDictionary(entry => entry.Key, entry => entry.Value)
+                );
+
+                return scores;
             }
         }
 

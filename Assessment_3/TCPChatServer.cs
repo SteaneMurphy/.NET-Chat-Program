@@ -349,8 +349,7 @@ namespace Windows_Forms_Chat
                         SendBack("!login valid", currentClientSocket);
                         currentClientSocket.username = incomingText[1];
                         SendToAll($"{currentClientSocket.username} has entered the chat!", currentClientSocket);
-                        currentClientSocket.stateLogin = false;
-                        currentClientSocket.stateChatting = true;
+                        currentClientSocket.SetState("stateChatting");
                     }
                     else 
                     {
@@ -369,14 +368,26 @@ namespace Windows_Forms_Chat
                         SendBack("!regvalid", currentClientSocket);
                         currentClientSocket.username = incomingText[1];
                         SendToAll($"{currentClientSocket.username} has entered the chat!", currentClientSocket);
-                        currentClientSocket.stateLogin = false;
-                        currentClientSocket.stateChatting = true;
+                        currentClientSocket.SetState("stateChatting");
                     }
                     else 
                     {
                         SendBack($"!regError {usernameError} {passwordError} {emailError}", currentClientSocket);
                     }
                     Console.WriteLine($"regValid: {registrationValid}, userErr: {usernameError}, passErr: {passwordError}, emailErr: {emailError}");
+                    break;
+                case "!join":
+                    SendBack("Searching for a game... please wait...", currentClientSocket);
+                    currentClientSocket.SetState("stateLooking");
+                    break;
+                case "!scores":
+                    SendBack("*** The current scoreboard (highest to lowest) ***", currentClientSocket);
+                    Dictionary<string, int[]> scores = new Dictionary<string, int[]>();
+                    scores = db.ScoresHighestToLowest();
+                    foreach (KeyValuePair<string, int[]> pair in scores) 
+                    {
+                        SendBack($"\nUser: {pair.Key} Wins: {pair.Value[0]} Losses: {pair.Value[1]} Draws: {pair.Value[2]}", currentClientSocket);
+                    }
                     break;
                 /*
                     If no command is detected, whatever text was sent to the server is broadcast to all connected clients.

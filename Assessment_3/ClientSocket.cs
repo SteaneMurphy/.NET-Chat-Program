@@ -24,8 +24,40 @@ namespace Windows_Forms_Chat
         public bool mod = false;
 
         //Client State
-        public bool stateLogin = true;
+        public bool stateLogin = false;
         public bool stateChatting = false;
+        public bool stateLooking = false;
         public bool statePlaying = false;
+
+        public void SetState(string state) 
+        {
+            switch (state) 
+            {
+                case "stateLogin":
+                    stateLogin = true;
+                    stateChatting = false;
+                    stateLooking = false;
+                    statePlaying = false;
+                    break;
+                case "stateChatting":
+                    stateLogin = false;
+                    stateChatting = true;
+                    stateLooking = false;
+                    statePlaying = false;
+                    break;
+                case "stateLooking":
+                    stateLogin = false;
+                    stateChatting = false;
+                    stateLooking = true;
+                    statePlaying = false;
+                    break;
+                case "statePlaying":
+                    stateLogin = false;
+                    stateChatting = false;
+                    stateLooking = false;
+                    statePlaying = true;
+                    break;
+            }
+        }
     }
 }

@@ -127,6 +127,7 @@ namespace Windows_Forms_CORE_CHAT_UGH
                     forms = new Forms(client, this, chatForm);
                     client.SetForms(forms);
                     chatForm.UpdateClient(client);
+                    client.clientSocket.SetState("stateLogin");
 
                     if (client == null)
                         throw new Exception("Incorrect port value!");
